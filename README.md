@@ -4,7 +4,10 @@ Uma busca e filtro simples usando JavaScript que destaca visualmente na listagem
 
 
 ## O Resultado
-Link do projeto: https://douglasamarelo-filtro-em-js.netlify.com/
+
+- Link do [projeto no Netlify](https://douglasamarelo-filtro-em-js.netlify.com/)
+- Link do [projeto no Codepen](https://codepen.io/DouglasAmarelo/full/VwLOrxO)
+
 
 ![filtrar-em-javascript](https://user-images.githubusercontent.com/3269950/78501074-857e3d80-7730-11ea-9f16-f83385f7405b.gif)
 
