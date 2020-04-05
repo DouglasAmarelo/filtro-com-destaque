@@ -1,6 +1,6 @@
-# Filtro em JavaScript com destaque na listagem
+# Busca e filtro em JavaScript com destaque na listagem
 
-Um filtro simples usando JavaScript que destaca visualmente na listagem os items encontrados com o termo buscado.
+Uma busca e filtro simples usando JavaScript que destaca visualmente na listagem os items encontrados com o termo buscado.
 
 
 ## O Resultado
