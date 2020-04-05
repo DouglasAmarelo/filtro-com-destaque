@@ -5,55 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Filtro em JavaScript com destaque na listagem</title>
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Roboto:400&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
     <div class="container">
-      <header class="header">
+      <header class="header shadow">
         <h1>Filtro em JavaScript com destaque na listagem</h1>
       </header>
 
       <div class="content">
-        <form action="#" class="form">
+        <form action="#" class="form shadow">
           <input type="text" class="search" placeholder="Filtrar itens" />
         </form>
-        <ul class="cidades">
-          <li>Acre (AC)</li>
-          <li>Alagoas (AL)</li>
-          <li>Amapá (AP)</li>
-          <li>Amazonas (AM)</li>
-          <li>Bahia (BA)</li>
-          <li>Ceará (CE)</li>
-          <li>Distrito Federal (DF)</li>
-          <li>Espírito Santo (ES)</li>
-          <li>Goiás (GO)</li>
-          <li>Maranhão (MA)</li>
-          <li>Mato Grosso (MT)</li>
-          <li>Mato Grosso do Sul (MS)</li>
-          <li>Minas Gerais (MG)</li>
-          <li>Pará (PA)</li>
-          <li>Paraíba (PB)</li>
-          <li>Paraná (PR)</li>
-          <li>Pernambuco (PE)</li>
-          <li>Piauí (PI)</li>
-          <li>Rio de Janeiro (RJ)</li>
-          <li>Rio Grande do Norte (RN)</li>
-          <li>Rio Grande do Sul (RS)</li>
-          <li>Rondônia (RO)</li>
-          <li>Roraima (RR)</li>
-          <li>Santa Catarina (SC)</li>
-          <li>São Paulo (SP)</li>
-          <li>Sergipe (SE)</li>
-          <li>Tocantins (TO</li>
-        </ul>
+
+        <ul class="list"></ul>
+
+        <div class="list-results">
+          <strong>Resultados da busca</strong>
+          <span class="filtered">0</span>
+          <strong>de</strong>
+          <span class="total">0</span>
+        </div>
       </div>
 
       <footer class="footer">
         <p>
-          Feito com 🧡 -
+          Feito com 🧡 por
           <a
             href="https://douglasamarelo.com/"
             title="Douglas Lopes"
