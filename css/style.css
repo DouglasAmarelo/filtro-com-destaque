@@ -1,6 +1,7 @@
 :root {
   --blue: #250048;
   --pink: #f9386a;
+  --gray: #eeeeef;
   --light-gray: #f3f4f4;
   --light-light-gray: #fafafa;
 }
@@ -44,7 +45,7 @@ body {
           box-shadow: 0 7px 14px 0 var(--light-gray);
   height: 100%;
   margin: 2em auto;
-  max-width: 800px;
+  max-width: 600px;
   padding: 2em;
   width: 90%;
 }
@@ -66,5 +67,54 @@ body {
 
 .footer p {
   margin: 7px;
+}
+
+.form {
+  display: block;
+}
+
+.search {
+  border: 1px solid var(--gray);
+  padding: 1em;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+}
+
+.search:focus {
+  border: 1px solid var(--blue);
+  outline: none;
+}
+
+.selected {
+  background-color: var(--pink);
+  color: #fff;
+  display: inline-block;
+  margin: 0 2px;
+  padding: 0 2px;
+}
+
+.cidades {
+  list-style: none;
+  margin: 1em 0;
+  padding: 0;
+  overflow: auto;
+  max-height: 50vh;
+}
+
+.cidades li {
+  border: 1px solid var(--gray);
+  padding: 0.5em 1em;
+  -webkit-transition: text-indent 0.3s, border 0.3s;
+  transition: text-indent 0.3s, border 0.3s;
+}
+
+.cidades li + li {
+  margin-top: 0.7em;
+}
+
+.cidades li:hover {
+  border: 1px solid var(--blue);
+  text-indent: 5px;
 }
 /*# sourceMappingURL=style.css.map */
