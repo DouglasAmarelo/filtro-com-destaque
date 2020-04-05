@@ -1,9 +1,10 @@
 :root {
   --blue: #250048;
+  --light-blue: #00c1eb;
   --pink: #f9386a;
   --gray: #eeeeef;
+  --dark-gray: #888889;
   --light-gray: #f3f4f4;
-  --light-light-gray: #fafafa;
 }
 
 * {
@@ -30,33 +31,45 @@ body {
 }
 
 .content {
-  border: 1px solid var(--light-light-gray);
-  box-shadow: 0 7px 14px 0 var(--light-gray);
   height: 100%;
   margin: 2em auto;
   max-width: 600px;
-  padding: 2em;
+  max-height: calc(100% - 160px);
   width: 90%;
+}
+
+.shadow {
+  box-shadow: 0 7px 14px 0 var(--gray);
 }
 
 .header,
 .footer {
-  background-color: var(--light-gray);
   text-align: center;
   width: 100%;
 }
 
 .header {
+  background-color: var(--pink);
+  color: #fff;
+
   h1 {
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+    word-spacing: 5px;
   }
 }
 
 .footer {
-  font-size: 13px;
+  background-color: var(--light-gray);
+  font-size: 12px;
 
   p {
     margin: 7px;
+  }
+
+  a {
+    color: var(--light-blue);
   }
 }
 
@@ -72,8 +85,30 @@ body {
   width: 100%;
 
   &:focus {
-    border: 1px solid var(--blue);
+    border: 1px solid var(--light-blue);
     outline: none;
+  }
+}
+
+.list-results {
+  align-items: center;
+  color: var(--dark-gray);
+  display: flex;
+  font-size: 12px;
+  height: 20px;
+  justify-content: center;
+  margin: 2em 0 1em 0;
+  padding: 0;
+
+  strong {
+    display: block;
+    padding: 0 0.5em;
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    width: 20px;
   }
 }
 
@@ -81,28 +116,36 @@ body {
   background-color: var(--pink);
   color: #fff;
   display: inline-block;
-  margin: 0 2px;
-  padding: 0 2px;
+  margin: 0 1px;
+  padding: 0 1px;
 }
 
-.cidades {
+.list {
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  margin: 1em 0;
-  padding: 0;
+  margin: 2em 0 1em 0;
+  max-height: calc(100% - 105px);
   overflow: auto;
-  max-height: 50vh;
+  padding: 0;
+
+  @media screen and (max-width: 570px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: 390px) {
+    grid-template-columns: 1fr;
+  }
 
   li {
+    font-size: 12px;
     border: 1px solid var(--gray);
     padding: 0.5em 1em;
     transition: text-indent 0.3s, border 0.3s;
 
-    & + li {
-      margin-top: 0.7em;
-    }
-
     &:hover {
-      border: 1px solid var(--blue);
+      border: 1px solid var(--light-blue);
       text-indent: 5px;
     }
   }

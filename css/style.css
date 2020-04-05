@@ -1,9 +1,10 @@
 :root {
   --blue: #250048;
+  --light-blue: #00c1eb;
   --pink: #f9386a;
   --gray: #eeeeef;
+  --dark-gray: #888889;
   --light-gray: #f3f4f4;
-  --light-light-gray: #fafafa;
 }
 
 * {
@@ -40,33 +41,47 @@ body {
 }
 
 .content {
-  border: 1px solid var(--light-light-gray);
-  -webkit-box-shadow: 0 7px 14px 0 var(--light-gray);
-          box-shadow: 0 7px 14px 0 var(--light-gray);
   height: 100%;
   margin: 2em auto;
   max-width: 600px;
-  padding: 2em;
+  max-height: calc(100% - 160px);
   width: 90%;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 7px 14px 0 var(--gray);
+          box-shadow: 0 7px 14px 0 var(--gray);
 }
 
 .header,
 .footer {
-  background-color: var(--light-gray);
   text-align: center;
   width: 100%;
 }
 
+.header {
+  background-color: var(--pink);
+  color: #fff;
+}
+
 .header h1 {
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: normal;
+  text-transform: uppercase;
+  word-spacing: 5px;
 }
 
 .footer {
-  font-size: 13px;
+  background-color: var(--light-gray);
+  font-size: 12px;
 }
 
 .footer p {
   margin: 7px;
+}
+
+.footer a {
+  color: var(--light-blue);
 }
 
 .form {
@@ -82,39 +97,83 @@ body {
 }
 
 .search:focus {
-  border: 1px solid var(--blue);
+  border: 1px solid var(--light-blue);
   outline: none;
+}
+
+.list-results {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--dark-gray);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 12px;
+  height: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 2em 0 1em 0;
+  padding: 0;
+}
+
+.list-results strong {
+  display: block;
+  padding: 0 0.5em;
+}
+
+.list-results span {
+  display: block;
+  text-align: center;
+  width: 20px;
 }
 
 .selected {
   background-color: var(--pink);
   color: #fff;
   display: inline-block;
-  margin: 0 2px;
-  padding: 0 2px;
+  margin: 0 1px;
+  padding: 0 1px;
 }
 
-.cidades {
+.list {
+  display: -ms-grid;
+  display: grid;
+  gap: 1em;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   list-style: none;
-  margin: 1em 0;
-  padding: 0;
+  margin: 2em 0 1em 0;
+  max-height: calc(100% - 105px);
   overflow: auto;
-  max-height: 50vh;
+  padding: 0;
 }
 
-.cidades li {
+@media screen and (max-width: 570px) {
+  .list {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.list li {
+  font-size: 12px;
   border: 1px solid var(--gray);
   padding: 0.5em 1em;
   -webkit-transition: text-indent 0.3s, border 0.3s;
   transition: text-indent 0.3s, border 0.3s;
 }
 
-.cidades li + li {
-  margin-top: 0.7em;
-}
-
-.cidades li:hover {
-  border: 1px solid var(--blue);
+.list li:hover {
+  border: 1px solid var(--light-blue);
   text-indent: 5px;
 }
 /*# sourceMappingURL=style.css.map */
