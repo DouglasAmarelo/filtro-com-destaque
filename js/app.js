@@ -39,7 +39,7 @@
   const $listToralItems = document.querySelector('.total');
 
   // Update DOM with the cities
-  const inertCitiesIntoDOM = cities => {
+  const insertCitiesIntoDOM = cities => {
     $list.innerHTML = cities.map(city => `<li>${city}</li>`).join('');
   };
 
@@ -77,12 +77,12 @@
     const searchRegex = transformTextToRegex(searchTerm);
     const filteredCities = filterByRegex(cities, searchRegex);
 
-    inertCitiesIntoDOM(searchTerm ? filteredCities : cities);
+    insertCitiesIntoDOM(searchTerm ? filteredCities : cities);
     updateFilteredItems(searchTerm ? filteredCities : []);
     highlightTextByRegex(searchTerm, searchRegex);
   });
 
   // Start app
-  inertCitiesIntoDOM(cities);
+  insertCitiesIntoDOM(cities);
   updateTotalItems(cities);
 })();
