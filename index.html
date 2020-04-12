@@ -12,25 +12,34 @@
   </head>
   <body>
     <div class="container">
+      <!-- Header -->
       <header class="header shadow">
         <h1>Filtro em JavaScript com destaque na listagem</h1>
       </header>
+      <!-- /Header -->
 
       <div class="content">
+        <!-- Search form -->
         <form action="#" class="form shadow">
           <input type="text" class="search" placeholder="Filtrar itens" />
         </form>
+        <!-- /Search form -->
 
+        <!-- Dynamic list from API -->
         <ul class="list"></ul>
+        <!-- /Dynamic list from API -->
 
+        <!-- Items found in the search -->
         <div class="list-results">
           <strong>Resultados da busca</strong>
           <span class="filtered">0</span>
           <strong>de</strong>
           <span class="total">0</span>
         </div>
+        <!-- /Items found in the search -->
       </div>
 
+      <!-- Footer -->
       <footer class="footer">
         <p>
           Feito com 🧡 por
@@ -43,6 +52,7 @@
           </a>
         </p>
       </footer>
+      <!-- /Footer -->
     </div>
     <script src="./js/app.js"></script>
   </body>
