@@ -40,10 +40,7 @@
 
   // Update DOM with the cities
   const inertCitiesIntoDOM = cities => {
-    $list.innerHTML = '';
-    cities.map(city =>
-      $list.insertAdjacentHTML('beforeEnd', `<li>${city}</li>`)
-    );
+    $list.innerHTML = cities.map(city => `<li>${city}</li>`).join('');
   };
 
   // Show the total size of the array of cities
